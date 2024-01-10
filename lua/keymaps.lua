@@ -33,6 +33,8 @@ keymap("v","K",":m '<-2<CR>gv=gv")
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n","<S-c>",":bdelete<CR>",opts)
+
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
@@ -43,7 +45,7 @@ keymap("v", "p", '"_dP', opts)
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
-keymap("i","<C-s>",":w<CR>",opts)
+
 -- Visual --
 -- Stay in indent mode
 keymap("v", "<", "<gv", opts)
@@ -53,7 +55,6 @@ keymap("v", ">", ">gv", opts)
 keymap('n','<C-s>',':w<CR>',opts)
 
 --shortcut for explorer
---
 keymap('n','<A-e>',':Explore<CR>',opts)
 
 --Shourtcut for end of line
@@ -67,8 +68,10 @@ keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 
 
---custome
+--close file
 keymap("n","<C-q>",":q<CR>",opts)
+
+--search
 keymap("n","<leader>e",":%s/",opts)
 
 
