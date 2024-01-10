@@ -71,21 +71,6 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 keymap("n","<C-q>",":q<CR>",opts)
 keymap("n","<leader>e",":%s/",opts)
 
---barbar
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
-
-
--- Goto buffer in position...
-map('n', '<A-1>', '<Cmd>BufferGoto 1<CR>', opts)
-map('n', '<A-2>', '<Cmd>BufferGoto 2<CR>', opts)
-map('n', '<A-3>', '<Cmd>BufferGoto 3<CR>', opts)
-map('n', '<A-4>', '<Cmd>BufferGoto 4<CR>', opts)
-map('n', '<A-5>', '<Cmd>BufferGoto 5<CR>', opts)
-
--- Close buffer
-map('n', '<S-c>', '<Cmd>BufferClose<CR>', opts)
-
 
 --git
  -- Navigation
