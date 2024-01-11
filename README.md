@@ -8,5 +8,15 @@
 * Mason
 * gitsigns
 * Neovim lsp
-* webdev icons
+* Trouble
+
+
+# Treesitter
+
+* add following line if your on windows 
+```lua
+  require 'nvim-treesitter.install'.prefer_git = false
+  require 'nvim-treesitter.install'.compilers = { "clang" }
+```
+
 
