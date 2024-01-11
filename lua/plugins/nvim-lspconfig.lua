@@ -3,6 +3,7 @@ local config=function()
   local lspconfig = require("lspconfig") 
   local cmp_nvim_lsp = require("cmp_nvim_lsp")
   local capabilities = cmp_nvim_lsp.default_capabilities()
+
   --diagnostic icons
   local diagnostic_signs= {
     Error = " ",
@@ -16,13 +17,11 @@ local config=function()
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
   end
 
+
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     settings={
       ["rust-analyzer"] = {
-        diagnostics={
-          globals = { "rust" },
-        },
         imports = {
           granularity = {
             group = "module",
