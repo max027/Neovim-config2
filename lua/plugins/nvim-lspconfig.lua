@@ -10,14 +10,38 @@ local config=function()
     Hint = "",
     Info = "",
   }
-  
+
   for type, icon in pairs(diagnostic_signs) do
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
   end
 
   lspconfig.rust_analyzer.setup({
-   capabilities = capabilities,
+    capabilities = capabilities,
+    settings={
+      ["rust-analyzer"] = {
+        diagnostics={
+          globals = { "rust" },
+        },
+        imports = {
+          granularity = {
+            group = "module",
+          },
+          prefix = "self",
+        },
+        cargo = {
+          buildScripts = {
+            enable = true,
+          },
+        },
+        procMacro = {
+          enable = true
+        },
+        checkOnSave={
+          command = "clippy",
+        },
+      }
+    }
   })
 
   lspconfig.lua_ls.setup({
@@ -45,13 +69,13 @@ end
 
 
 return {
-	"neovim/nvim-lspconfig",
-	config = config,
-	lazy = false,
-	dependencies = {
-		"williamboman/mason.nvim",
-		"hrsh7th/nvim-cmp",
-		"hrsh7th/cmp-buffer",
-		"hrsh7th/cmp-nvim-lsp",
-	},
+  "neovim/nvim-lspconfig",
+  config = config,
+  lazy = false,
+  dependencies = {
+    "williamboman/mason.nvim",
+    "hrsh7th/nvim-cmp",
+    "hrsh7th/cmp-buffer",
+    "hrsh7th/cmp-nvim-lsp",
+  },
 }
