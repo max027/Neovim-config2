@@ -1,7 +1,7 @@
 local config=function()
   --for windows else treesitter parser wont compile
-  require 'nvim-treesitter.install'.prefer_git = false
-  require 'nvim-treesitter.install'.compilers = { "clang" }
+--  require 'nvim-treesitter.install'.prefer_git = false
+ -- require 'nvim-treesitter.install'.compilers = { "clang" }
 
 
   require("nvim-treesitter.configs").setup({

@@ -55,7 +55,7 @@ keymap("v", ">", ">gv", opts)
 keymap('n','<C-s>',':w<CR>',opts)
 
 --shortcut for explorer
-keymap('n','<A-e>',':Explore<CR>',opts)
+keymap('n','<A-q>',':Explore<CR>',opts)
 
 --Shourtcut for end of line
 -- Telescope
@@ -85,7 +85,7 @@ keymap("n","<leader>e",":%s/",opts)
     keymap('v', '<leader>hs', ':Gitsigns stage_hunk<CR>')
     keymap('n', '<leader>hr', ':Gitsigns reset_hunk<CR>')
     keymap('v', '<leader>hr', ':Gitsigns reset_hunk<CR>')
-    keymap('n', '<leader>hS', '<cmd>Gitsigns stage_buffer<CR>')
+    keymap('n', '<leader>ha', '<cmd>Gitsigns stage_buffer<CR>')
     keymap('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>')
     keymap('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>')
     keymap('n', '<leader>hp', '<cmd>Gitsigns preview_hunk<CR>')
