@@ -43,6 +43,7 @@ vim.opt.linebreak = true
 vim.opt.relativenumber=true
 
 --linux clipboard issue
+--linux clipboard issue
 --to change clipabord change name of clipboard
 vim.g.clipboard = {
   name = 'xclip-xfce4-clipman',
