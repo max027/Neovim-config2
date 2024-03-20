@@ -17,7 +17,7 @@ local config=function()
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
   end
 
-  lspconfig.tsserver.setup({
+lspconfig.tsserver.setup({
     capabilities = capabilities,
     
   })
@@ -29,6 +29,7 @@ local config=function()
 
 
 
+  --[[
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     settings={
@@ -53,6 +54,7 @@ local config=function()
       }
     }
   })
+  ]]--
 
   lspconfig.lua_ls.setup({
     capabilities = capabilities,

@@ -41,27 +41,3 @@ vim.opt.iskeyword:append "-"                    -- treats words with `-` as sing
 vim.opt.formatoptions:remove { "c", "r", "o" }  -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
 vim.opt.relativenumber=true
-
---linux clipboard issue
---linux clipboard issue
---to change clipabord change name of clipboard
-vim.g.clipboard = {
-  name = 'xclip-xfce4-clipman',
-  copy = {
-    ['+'] = function(selection)
-      vim.fn.system('xclip -selection clipboard', selection)
-    end,
-    ['*'] = function(selection)
-      vim.fn.system('xclip -selection clipboard', selection)
-    end,
-  },
-  paste = {
-    ['+'] = function()
-      return vim.fn.system('xclip -selection clipboard -o')
-    end,
-    ['*'] = function()
-      return vim.fn.system('xclip -selection clipboard -o')
-    end,
-  },
-  cache_enabled = 1,
-}

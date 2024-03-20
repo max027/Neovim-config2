@@ -7,7 +7,7 @@ local config=function()
   require("nvim-treesitter.configs").setup({
 
     build = ":TSUpdate",
-    auto_install = false,
+    auto_install = true,
     autotag = {
       enable = true,
     },
