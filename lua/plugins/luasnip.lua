@@ -57,89 +57,11 @@ local config=function()
     ext_prio_increase = 1,
     enable_autosnippets = true,
   })
-  ls.add_snippets("typescript",{
-    s("logg",fmt("console.log('{}')",{
-      i(1)
-    })),
-    s("jfl",fmt([[
-    for(let {}=0;{}<{};{}++){{
-      {}
-    }}]],{
-      i(1),rep(1),i(2),rep(1),i(3)
-    })),
-    s("jaf",fmt([[
-    const {}=({})=>{{
-      {}
-    }}
-    ]],{
-      i(1),i(2),i(3)
-    })),
-    s("jff",fmt([[
-    function {}({}){{
-      {}
-    }}
-    ]],{
-      i(1),i(2),i(3)
-    })),
-    s("jwl",fmt([[
-    while({}){{
-      {}
-    }}
-    ]],{
-      i(1),i(2)
-    }))
-  })
-  ls.add_snippets("javascript",{
-    s("logg",fmt("console.log('{}')",{
-      i(1)
-    })),
-    s("jwl",fmt([[
-    while({}){{
-      {}
-    }}
-    ]],{
-      i(1),i(2)
-    })),
-    s("jfl",fmt([[
-    for(let {}=0;{}<{};{}++){{
-      {}
-    }}]],{
-      i(1),rep(1),i(2),rep(1),i(3)
-    })),
-    s("jaf",fmt([[
-    const {}=({})=>{{
-      {}
-    }}
-    ]],{
-      i(1),i(2),i(3)
-    })),
-    s("jff",fmt([[
-    function {}({}){{
-      {}
-    }}
-    ]],{
-      i(1),i(2),i(3)
-    })),
-    s("jwl",fmt([[
-    while({}){{
-      {}
-    }}
-    ]],{
-      i(1),i(2)
-    }))
-  })
-
-  ls.add_snippets("all", {
-    s("tery", {
-      i(1, "cond"), t(" ? "), i(2, "then"), t(" : "), i(3, "else")
-    }),
-
-  })
 end
 return {
   "L3MON4D3/LuaSnip",
   config=config,
   lazy=false,
   build = "make install_jsregexp",
-  dependencies = { "rafamadriz/friendly-snippets" },
+  dependencies = { "rafamadriz/friendly-snippets", 'saadparwaiz1/cmp_luasnip'  },
 }
