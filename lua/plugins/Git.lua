@@ -1,4 +1,5 @@
 return {
+  {
   'lewis6991/gitsigns.nvim', 
   lazy=false,
   config={
@@ -37,4 +38,9 @@ return {
       enable = false
     },
   },     
+},
+{
+"tpope/vim-fugitive",
+lazy=false
+}
 }

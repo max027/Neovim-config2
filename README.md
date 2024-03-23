@@ -9,6 +9,8 @@
 * gitsigns
 * Neovim lsp
 * Trouble
+* Vscode snippets
+* lualine
 
 # Installation
 clone the repo
