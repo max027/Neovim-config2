@@ -71,7 +71,7 @@ keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opt
 --close file
 keymap("n","<C-q>",":q<CR>",opts)
 
---search
+--replace
 keymap("n","<leader>e",":%s/",opts)
 
 

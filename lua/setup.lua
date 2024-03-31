@@ -41,3 +41,12 @@ vim.opt.iskeyword:append "-"                    -- treats words with `-` as sing
 vim.opt.formatoptions:remove { "c", "r", "o" }  -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
 vim.opt.relativenumber=true
+
+
+
+--Highlight the yanked text
+vim.api.nvim_create_autocmd('TextYankPost',{
+  callback=function ()
+    vim.highlight.on_yank()
+  end
+})
