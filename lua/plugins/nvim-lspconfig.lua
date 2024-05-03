@@ -44,18 +44,6 @@ local config=function()
       vim.lsp.buf.format({async = false})
     end
   })
-  lspconfig.gopls.setup({
-    capabilities=capabilities,
-    settings = {
-      gopls = {
-        analyses = {
-          unusedparams = true,
-        },
-        staticcheck = true,
-        gofumpt = true,
-      },
-    },
-  })
   --[[
   lspconfig.clangd.setup({
     capabilities = capabilities,
@@ -65,7 +53,6 @@ local config=function()
 
 
 
-  --[[
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     settings={
@@ -90,7 +77,6 @@ local config=function()
       }
     }
   })
-  ]]--
 
   lspconfig.lua_ls.setup({
     capabilities = capabilities,
@@ -111,7 +97,9 @@ local config=function()
     },
   })
 
+lspconfig.tsserver.setup({
 
+})
 
 
 end
