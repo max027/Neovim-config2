@@ -7,10 +7,12 @@
 * Telescope
 * Mason
 * gitsigns
+* vim fugutive
 * Neovim lsp
 * Trouble
 * Vscode snippets
 * lualine
+* vim navigator
 
 # Installation
 clone the repo
@@ -38,7 +40,7 @@ Default theme of editor is tokyonight
 
 # Treesitter
 
-* add following line if your on windows in treesitter.lua file in lua/plugins
+add following line if your on windows in treesitter.lua file in lua/plugins
 ```lua
   require 'nvim-treesitter.install'.prefer_git = false
   require 'nvim-treesitter.install'.compilers = { "clang" }
@@ -52,9 +54,17 @@ Install clang and llvm ,mingw does note work.Also need visual studio or else par
 # Lsp
 By-default lsp is configured for lua,rust,typescript.To change edit lua/plugins/nvim-lspconfig
 
-# Mason
+# Mason 
 mason handel Installation of lsp servers.To install use 
 ```bash
 :Mason
 ```
 go to desired server and press i
+
+# Vim navigator
+use to navigate between different panes in tmux when neovim is opened
+
+
+# Git
+vim fugutive is used as wrapper for git in neovim and gitsigns is used to mark the line in which changes were
+made
