@@ -21,7 +21,7 @@ local config=function()
     capabilities = capabilities,
 
   })
- --[[
+  --[[
   lspconfig.clangd.setup({
     capabilities = capabilities,
 
@@ -29,7 +29,7 @@ local config=function()
   ]]--
 
 
-
+  --[[
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     settings={
@@ -54,8 +54,19 @@ local config=function()
       }
     }
   })
-
-  lspconfig.lua_ls.setup({
+  ]]--
+  lspconfig.gopls.setup({
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+        gofumpt = true,
+      },
+    },
+  })
+lspconfig.lua_ls.setup({
     capabilities = capabilities,
     settings = { 
       Lua = {
