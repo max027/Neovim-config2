@@ -31,7 +31,6 @@ local config=function()
   ]]--
 
 
-  --[[
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
     settings={
@@ -56,7 +55,7 @@ local config=function()
       }
     }
   })
-  ]]--
+
   lspconfig.gopls.setup({
     settings = {
       gopls = {

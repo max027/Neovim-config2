@@ -9,7 +9,6 @@
 * gitsigns
 * vim fugutive
 * Neovim lsp
-* Trouble
 * Vscode snippets
 * lualine
 * vim navigator
