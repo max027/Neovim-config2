@@ -76,7 +76,6 @@ keymap("n","<C-q>",":q<CR>",opts)
 keymap("n","<leader>e",":%s/",opts)
 
 
---[[
 --git
  -- Navigation
     keymap('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
@@ -100,11 +99,11 @@ keymap("n","<leader>e",":%s/",opts)
     -- Text object
     keymap('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
     keymap('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
+--[[
 --Trouble
 --keymap("n", "<leader>xx", function() require("trouble").toggle() end)
 --keymap("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
 --keymap("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
 --keymap("n", "gR", function() require("trouble").toggle("lsp_references") end)
 --]]
-
 
