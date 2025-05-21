@@ -62,7 +62,3 @@ go to desired server and press i
 # Vim navigator
 use to navigate between different panes in tmux when neovim is opened
 
-
-# Git
-vim fugutive is used as wrapper for git in neovim and gitsigns is used to mark the line in which changes were
-made

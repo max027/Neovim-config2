@@ -96,34 +96,9 @@ keymap("n","<C-q>",":q<CR>",opts)
 keymap("n","<leader>e",":%s/",opts)
 
 
---git
- -- Navigation
-    keymap('n', ']c', "&diff ? ']c' : '<cmd>Gitsigns next_hunk<CR>'", {expr=true})
-    keymap('n', '[c', "&diff ? '[c' : '<cmd>Gitsigns prev_hunk<CR>'", {expr=true})
-
-    -- Actions
-    keymap('n', '<leader>hs', ':Gitsigns stage_hunk<CR>')
-    keymap('v', '<leader>hs', ':Gitsigns stage_hunk<CR>')
-    keymap('n', '<leader>hr', ':Gitsigns reset_hunk<CR>')
-    keymap('v', '<leader>hr', ':Gitsigns reset_hunk<CR>')
-    keymap('n', '<leader>ha', '<cmd>Gitsigns stage_buffer<CR>')
-    keymap('n', '<leader>hu', '<cmd>Gitsigns undo_stage_hunk<CR>')
-    keymap('n', '<leader>hR', '<cmd>Gitsigns reset_buffer<CR>')
-    keymap('n', '<leader>hq', '<cmd>Gitsigns preview_hunk<CR>')
-    keymap('n', '<leader>hb', '<cmd>lua require"gitsigns".blame_line{full=true}<CR>')
-    keymap('n', '<leader>tb', '<cmd>Gitsigns toggle_current_line_blame<CR>')
-    keymap('n', '<leader>hd', '<cmd>Gitsigns diffthis<CR>')
-    keymap('n', '<leader>hD', '<cmd>lua require"gitsigns".diffthis("~")<CR>')
-    keymap('n', '<leader>td', '<cmd>Gitsigns toggle_deleted<CR>')
-
-    -- Text object
-    keymap('o', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
-    keymap('x', 'ih', ':<C-U>Gitsigns select_hunk<CR>')
---[[
 --Trouble
 --keymap("n", "<leader>xx", function() require("trouble").toggle() end)
 --keymap("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
 --keymap("n", "<leader>xd", function() require("trouble").toggle("document_diagnostics") end)
 --keymap("n", "gR", function() require("trouble").toggle("lsp_references") end)
---]]
 
