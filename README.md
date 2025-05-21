@@ -6,12 +6,11 @@
 * Treesitter
 * Telescope
 * Mason
-* gitsigns
-* vim fugutive
 * Neovim lsp
-* Vscode snippets
-* lualine
+* barbar
 * vim navigator
+* Trouble
+* nvim-web-devicons
 
 # Installation
 clone the repo
