@@ -63,5 +63,5 @@ return {
   config=config,
   lazy=false,
   build = "make install_jsregexp",
-  dependencies = { "rafamadriz/friendly-snippets", 'saadparwaiz1/cmp_luasnip'  },
+  dependencies = { 'saadparwaiz1/cmp_luasnip'  },
 }
