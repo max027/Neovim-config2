@@ -25,7 +25,7 @@ copy-item -path path\to\neovim-config2 -destination path\to\appdata\nvim -recurs
 ```
 In linux
 ```bash
-cp Neovim-config2/ ~/.config/nvim 
+cp -r Neovim-config2/{.,}* ~/.config/nvim/
 ```
 
 # Workspace
