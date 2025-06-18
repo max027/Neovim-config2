@@ -22,18 +22,15 @@ local config=function()
 
   })
 
-  --[[
   lspconfig.clangd.setup({
     capabilities = capabilities,
 
   })
-  ]]--
-
 
   lspconfig.rust_analyzer.setup({
     capabilities = capabilities,
   })
-
+  --[[
   lspconfig.gopls.setup({
     settings = {
       gopls = {
@@ -45,7 +42,8 @@ local config=function()
       },
     },
   })
-lspconfig.lua_ls.setup({
+  --]]
+  lspconfig.lua_ls.setup({
     capabilities = capabilities,
     settings = { 
       Lua = {
@@ -64,7 +62,6 @@ lspconfig.lua_ls.setup({
     },
   })
 end
-
 
 return {
   "neovim/nvim-lspconfig",

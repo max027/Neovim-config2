@@ -41,8 +41,12 @@ vim.opt.iskeyword:append "-"                    -- treats words with `-` as sing
 vim.opt.formatoptions:remove { "c", "r", "o" }  -- This is a sequence of letters which describes how automatic formatting is to be done
 vim.opt.linebreak = true
 vim.opt.relativenumber=true
+vim.g.have_nerd_font = true
+vim.o.showmode = true
 
-
+vim.schedule(function()
+  vim.o.clipboard = 'unnamedplus'
+end)
 
 --Highlight the yanked text
 vim.api.nvim_create_autocmd('TextYankPost',{
@@ -50,4 +54,31 @@ vim.api.nvim_create_autocmd('TextYankPost',{
     vim.highlight.on_yank()
   end
 })
+--diagnostic
+vim.diagnostic.config {
+  severity_sort = true,
+  float = { border = 'rounded', source = 'if_many' },
+  underline = { severity = vim.diagnostic.severity.ERROR },
+  signs = vim.g.have_nerd_font and {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '󰅚 ',
+      [vim.diagnostic.severity.WARN] = '󰀪 ',
+      [vim.diagnostic.severity.INFO] = '󰋽 ',
+      [vim.diagnostic.severity.HINT] = '󰌶 ',
+    },
+  } or {},
+  virtual_text = {
+    source = 'if_many',
+    spacing = 2,
+    format = function(diagnostic)
+      local diagnostic_message = {
+        [vim.diagnostic.severity.ERROR] = diagnostic.message,
+        [vim.diagnostic.severity.WARN] = diagnostic.message,
+        [vim.diagnostic.severity.INFO] = diagnostic.message,
+        [vim.diagnostic.severity.HINT] = diagnostic.message,
+      }
+      return diagnostic_message[diagnostic.severity]
+    end,
+  },
+}
 
