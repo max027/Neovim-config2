@@ -7,7 +7,6 @@
 * Telescope
 * Mason
 * Neovim lsp
-* barbar
 * vim navigator
 * Trouble
 * nvim-web-devicons
