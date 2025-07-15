@@ -21,9 +21,6 @@ local config=function()
     capabilities = capabilities,
 
   })
-  lspconfig.jdtls.setup({
-    capabilities = capabilities,
-  })
 
   lspconfig.clangd.setup({
     capabilities = capabilities,
